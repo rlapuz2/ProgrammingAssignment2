@@ -1,7 +1,13 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Caching the inverse of a mstrix
+## this two function project creates a matrix 
+## and finds the inverse, taking advantage of 
+## caching and saving computed inverses in local environments. 
+## This was a project from Coursera's R, by R.Peng
+## -- Ray Lapuz
 
-## Write a short comment describing this function
+## makeCacheMatrix
+##   -- copied from makeVector. 
+##   I simply changed the functions "mean" to "solve"
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
@@ -18,7 +24,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve
+## -- takes advantage of cached inverses/matrices
+## from the previous function. 
 
 cacheSolve <- function(x, ...) {
     m <- x$getinv()
